@@ -5,3 +5,96 @@ body {
     margin: 0;
     padding: 0;
 }
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom: 20px;
+}
+
+.piano {
+    margin-top: -5px;
+    margin-bottom: 35px;
+    padding: 5px;
+    background: linear-gradient(-60deg, #000, #333, #000, #666, #333 70%);
+}
+
+.key__inner {
+    width: fit-content;
+    background-color: #aaa;
+    font-size: 0;
+    margin: 0 auto;
+    padding-bottom: 2px;
+}
+
+.key {
+    display: inline-block;
+    width: 40px;
+    height: 210px;
+    background-color: #fff;
+    border-radius: 0 0 2px 2px;
+    cursor: pointer;
+    position: relative;
+    transition: height 0.1s ease;
+    margin-left: 2px;
+    vertical-align: top;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
+    font-size: 1em;
+}
+
+.key:first-of-type {
+    margin-left: 0px;
+}
+
+.key_pressed {
+    height: 209px;
+    font-size: 1em;
+    background-image: linear-gradient(#fff 0%, #f8f8f8 98%);
+}
+
+.key__name {
+    font-size: 1em;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    color: #000;
+    transform: translateX(-50%);
+    opacity: 0.2;
+}
+
+.chair__iner {
+    margin: 0 auto;
+}
+
+.chair {
+    width: 150px;
+    height: 150px;
+    background-color: rgba(17, 17, 17, 0.97);
+    border: inset 20px solid rgba(17, 17, 17, 1);
+    position: relative;
+    border-radius: 50%;
+}
+
+.chair__leg {
+    position: absolute;
+    top: -15%;
+    left: 46%;
+    width: 15px;
+    height: 30px;
+    background-color: rgba(17, 17, 17, 1);
+    border-radius: 5px 5px 0 0;
+}
+
+.chair__leg_second {
+    top: 55%;
+    left: -10%;
+    transform: rotate(-115deg);
+}
+
+.chair__leg_third {
+    top: 55%;
+    left: 100%;
+    transform: rotate(115deg);
+}
